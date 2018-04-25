@@ -1,0 +1,24 @@
+sonata_block:
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+            
+sonata_admin:
+    title: 'Hello'
+    templates : 
+        edit : 'AppBundle:Admin:edit.html.twig' 
+    dashboard:
+        groups:
+            app.menu.first:
+                label: Products
+                items:
+                    - app.admin.product
+            app.menu.second:
+                label: Category
+                items:
+                    - app.admin.category
+            app.menu.third:
+                label: Category
+                items:
+                    - app.admin.transactions
